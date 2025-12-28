@@ -30,7 +30,7 @@ Thumbs.db
 .env.local
 .env.*.local
 
-# Build outputs (if you add any build process later)
+# Build outputs (if I add any build process later)
 dist/
 build/
 *.min.js
