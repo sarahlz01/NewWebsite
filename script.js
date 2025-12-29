@@ -30,16 +30,44 @@ function dark() {
   pole.classList.remove('bg-shutter-gray');
   pole.classList.add('bg-[#20405E]');
 
-  // Main Text
+  // Change all text-rose-100 to text-cream (catches all text elements)
+  const allRoseTexts = document.querySelectorAll('.text-rose-100');
+  allRoseTexts.forEach(element => {
+    element.classList.remove('text-rose-100');
+    element.classList.add('text-cream');
+  });
+
+  // Main Text container
   const mainText = document.getElementById('main-text');
-  mainText.classList.remove('text-rose-100');
-  mainText.classList.add('text-cream');
+  if (mainText) {
+    mainText.classList.remove('text-rose-100');
+    mainText.classList.add('text-cream');
+  }
+
+  // Ensure all h1 elements in main-text get cream color
+  const h1Elements = document.querySelectorAll('#main-text h1');
+  h1Elements.forEach(h1 => {
+    h1.classList.remove('text-rose-100', 'text-black');
+    h1.classList.add('text-cream');
+  });
+
+  // Ensure all links (a elements) in main-text get cream color
+  const mainTextLinks = document.querySelectorAll('#main-text a');
+  mainTextLinks.forEach(link => {
+    link.classList.remove('text-rose-100');
+    link.classList.add('text-cream');
+    // Change hover color from blue-100 to rose-100 for dark mode
+    link.classList.remove('hover:text-blue-100');
+    link.classList.add('hover:text-rose-100');
+  });
 
   // Nav Texts
   const navButtons = document.querySelectorAll('.nav-text');
   navButtons.forEach(button => {
-    button.classList.remove('text-rose-100');
-    button.classList.add('text-cream');
+    if (!button.classList.contains('text-cream')) {
+      button.classList.remove('text-rose-100');
+      button.classList.add('text-cream');
+    }
   });
 
   // Nav Background
@@ -117,16 +145,26 @@ function light() {
   pole.classList.remove('bg-[#20405E]');
   pole.classList.add('bg-shutter-gray');
 
-  // Main text
+  // Change all text-cream back to text-rose-100 (only for text elements that were changed)
+  // Target specific elements: main text, nav buttons, mobile nav, and social links
   const mainText = document.getElementById('main-text');
-  mainText.classList.remove('text-cream');
-  mainText.classList.add('text-rose-100');
+  if (mainText) {
+    mainText.classList.remove('text-cream');
+    mainText.classList.add('text-rose-100');
+  }
 
-  // Nav texts
-  const navButtons = document.querySelectorAll('.nav-text');
-  navButtons.forEach(button => {
-    button.classList.remove('text-cream');
-    button.classList.add('text-rose-100');
+  // All elements that should have rose-100 text (nav buttons, mobile nav, social links, headings)
+  const textElements = document.querySelectorAll('.nav-text, .mobile-nav-text, #main-text a, #main-text h1');
+  textElements.forEach(element => {
+    element.classList.remove('text-cream', 'text-black');
+    element.classList.add('text-rose-100');
+  });
+
+  // Restore hover color to blue-100 for social media links in light mode
+  const mainTextLinks = document.querySelectorAll('#main-text a');
+  mainTextLinks.forEach(link => {
+    link.classList.remove('hover:text-rose-100');
+    link.classList.add('hover:text-blue-100');
   });
 
   // Nav background
