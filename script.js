@@ -1,4 +1,5 @@
 function dark() {
+
   // Toggle buttons
   document.getElementById('sun-button').classList.add('hidden');
   document.getElementById('moon-button').classList.remove('hidden');
@@ -25,17 +26,18 @@ function dark() {
   background.classList.remove('bg-shutter-gray');
   background.classList.add('bg-[#20405E]');
 
+  // About
+  const about = document.getElementById('about');
+  if (about) {
+    about.classList.remove('text-black');
+    about.classList.add('bg-[#20405E]');
+    about.classList.add('text-cream');
+  }
+
   // Pole
   const pole = document.getElementById('pole');
   pole.classList.remove('bg-shutter-gray');
   pole.classList.add('bg-[#20405E]');
-
-  // Change all text-rose-100 to text-cream (catches all text elements)
-  const allRoseTexts = document.querySelectorAll('.text-rose-100');
-  allRoseTexts.forEach(element => {
-    element.classList.remove('text-rose-100');
-    element.classList.add('text-cream');
-  });
 
   // Main Text container
   const mainText = document.getElementById('main-text');
@@ -47,7 +49,7 @@ function dark() {
   // Ensure all h1 elements in main-text get cream color
   const h1Elements = document.querySelectorAll('#main-text h1');
   h1Elements.forEach(h1 => {
-    h1.classList.remove('text-rose-100', 'text-black');
+    h1.classList.remove('text-rose-100');
     h1.classList.add('text-cream');
   });
 
@@ -109,6 +111,13 @@ function dark() {
     menuIconSvg.classList.remove('stroke-rose-100');
     menuIconSvg.classList.add('stroke-cream');
   }
+  
+  // Menu toggle button (parent of the SVG)
+  const menuToggle = document.getElementById('menu-toggle');
+  if (menuToggle) {
+    menuToggle.classList.remove('text-rose-100');
+    menuToggle.classList.add('text-cream');
+  }
 
   // Icon Change
   const favicon = document.querySelector('link[rel="icon"]');
@@ -154,6 +163,15 @@ function light() {
   background.classList.remove('bg-[#20405E]');
   background.classList.add('bg-shutter-gray');
 
+  // About
+  const about = document.getElementById('about');
+  if (about) {
+    about.classList.remove('text-cream');
+    about.classList.remove('bg-[#20405E]');
+    about.classList.add('text-black');
+  }
+
+
   // Pole
   const pole = document.getElementById('pole');
   pole.classList.remove('bg-[#20405E]');
@@ -171,7 +189,7 @@ function light() {
   // Note: mobile-nav-text is handled separately to stay blue-100
   const textElements = document.querySelectorAll('.nav-text, #main-text a, #main-text h1');
   textElements.forEach(element => {
-    element.classList.remove('text-cream', 'text-black');
+    element.classList.remove('text-cream');
     element.classList.add('text-rose-100');
   });
 
@@ -211,7 +229,7 @@ function light() {
   // Menu close button
   const menuCloseIcon = document.getElementById('menu-close-icon');
   if (menuCloseIcon) {
-    menuCloseIcon.classList.remove('stroke-blue-100', 'stroke-cream');
+    menuCloseIcon.classList.remove('stroke-cream', 'stroke-blue-100');
     menuCloseIcon.classList.add('stroke-rose-100');
   }
 
@@ -220,6 +238,13 @@ function light() {
   if (menuIconSvg) {
     menuIconSvg.classList.remove('stroke-cream');
     menuIconSvg.classList.add('stroke-rose-100');
+  }
+  
+  // Menu toggle button (parent of the SVG)
+  const menuToggle = document.getElementById('menu-toggle');
+  if (menuToggle) {
+    menuToggle.classList.remove('text-cream');
+    menuToggle.classList.add('text-rose-100');
   }
 
   // Icon change
@@ -231,6 +256,8 @@ function light() {
   if (iconImage) {
     iconImage.src = 'assets/icon2.png';
   }
+
+
 }
 
 // Mobile menu toggle
