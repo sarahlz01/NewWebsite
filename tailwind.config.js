@@ -15,6 +15,20 @@ module.exports = {
         'sans': ['Instrument Sans', 'sans-serif'],
         'serif': ['Instrument Serif', 'serif'],
       },
+      keyframes: {
+        billow: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(-10px)', rotate: '-3deg' },
+        },
+        'billow-rotated': {
+          '0%, 100%': { transform: 'translateX(0) rotate(-25deg)' },
+          '50%': { transform: 'translateX(-10px) rotate(-28deg)' },
+        },
+      },
+      animation: {
+        billow: 'billow 3s ease-in-out infinite',
+        'billow-rotated': 'billow-rotated 3s ease-in-out infinite',
+      },
     },
   },
   plugins: [],
