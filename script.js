@@ -1,5 +1,20 @@
 function dark() {
 
+  //Contact Page Icons
+  const contactEmail = document.getElementById('contactEmail');
+  contactEmail.classList.remove('hover:text-blue-100');
+  contactEmail.classList.add('hover:text-rose-100');
+  const contactLinked = document.getElementById('contactLinked');
+  contactLinked.classList.remove('hover:text-blue-100');
+  contactLinked.classList.add('hover:text-rose-100');
+
+  const contactPage = document.getElementById('rounddiv');
+  contactPage.classList.remove('bg-rose-100');
+  contactPage.classList.add('bg-cream');
+
+  const contact = document.getElementById('contact');
+  contact.classList.add('bg-[#20405E]');
+
   // Toggle buttons
   document.getElementById('sun-button').classList.add('hidden');
   document.getElementById('moon-button').classList.remove('hidden');
