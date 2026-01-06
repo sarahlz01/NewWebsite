@@ -1024,6 +1024,31 @@ video {
   background-color: rgb(219 209 206 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#20405E\]\/80 {
+  background-color: rgb(32 64 94 / 0.8);
+}
+
+.bg-\[\#5D80B1\]\/80 {
+  background-color: rgb(93 128 177 / 0.8);
+}
+
+.bg-rose-100\/80 {
+  background-color: rgb(209 144 157 / 0.8);
+}
+
+.bg-rose-100\/20 {
+  background-color: rgb(209 144 157 / 0.2);
+}
+
+.bg-rose-100\/50 {
+  background-color: rgb(209 144 157 / 0.5);
+}
+
+.bg-cream {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 251 246 / var(--tw-bg-opacity, 1));
+}
+
 .bg-gradient-to-bl {
   background-image: linear-gradient(to bottom left, var(--tw-gradient-stops));
 }
