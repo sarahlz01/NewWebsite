@@ -1137,6 +1137,10 @@ video {
   padding: 5%;
 }
 
+.p-\[6vh\] {
+  padding: 6vh;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1496,6 +1500,10 @@ main::-webkit-scrollbar {
 
   .md\:p-\[2\%\] {
     padding: 2%;
+  }
+
+  .md\:p-\[10vh\] {
+    padding: 10vh;
   }
 
   .md\:text-2xl {
