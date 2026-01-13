@@ -1,4 +1,31 @@
 function dark() {
+  // Design
+  const design = document.getElementById('design');
+  design.classList.add('bg-[#20405E]');
+  design.classList.remove('text-black');
+  design.classList.add('text-cream');
+
+  const purpose = document.getElementById('purpose');
+  purpose.classList.add('text-blue-50');
+  const inclusivity = document.getElementById('inclusivity');
+  inclusivity.classList.add('text-rose-50');
+  const feedback = document.getElementById('Feedback');
+  feedback.classList.add('text-shutter-gray');
+
+  const purposeSpan = document.getElementById('purpose-span');
+  purposeSpan.classList.remove('bg-blue-50');
+  purposeSpan.classList.add('bg-transparent');
+
+  const inclusivitySpan = document.getElementById('inclusivity-span');
+  inclusivitySpan.classList.remove('bg-rose-50');
+  inclusivitySpan.classList.add('bg-transparent');
+
+  const feedbackSpan = document.getElementById('feedback-span');
+  feedbackSpan.classList.remove('bg-shutter-gray');
+  feedbackSpan.classList.add('bg-transparent');
+
+  document.getElementById('adam').src = 'assets/adam2.svg';
+  document.getElementById('god').src = 'assets/god2.svg';
 
   //Contact Page Icons
   const contactEmail = document.getElementById('contactEmail');
@@ -146,6 +173,34 @@ function dark() {
 
 // Light mode function
 function light() {
+  // Design
+  const design = document.getElementById('design');
+  design.classList.remove('bg-[#20405E]');
+  design.classList.add('text-black');
+  design.classList.remove('text-cream');
+
+  const purpose = document.getElementById('purpose');
+  purpose.classList.remove('text-blue-50');
+  const inclusivity = document.getElementById('inclusivity');
+  inclusivity.classList.remove('text-rose-50');
+  const feedback = document.getElementById('Feedback');
+  feedback.classList.remove('text-shutter-gray');
+
+  const purposeSpan = document.getElementById('purpose-span');
+  purposeSpan.classList.add('bg-blue-50');
+  purposeSpan.classList.remove('bg-transparent');
+
+  const inclusivitySpan = document.getElementById('inclusivity-span');
+  inclusivitySpan.classList.add('bg-rose-50');
+  inclusivitySpan.classList.remove('bg-transparent');
+
+  const feedbackSpan = document.getElementById('feedback-span');
+  feedbackSpan.classList.add('bg-shutter-gray');
+  feedbackSpan.classList.remove('bg-transparent');
+
+  document.getElementById('adam').src = 'assets/adam.svg';
+  document.getElementById('god').src = 'assets/god.svg';
+
   //Contact Page Icons
   const contactEmail = document.getElementById('contactEmail');
   contactEmail.classList.remove('hover:text-rose-100');
@@ -328,3 +383,35 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
+// Creation of Adam Animation
+let currentPadding = getBasePadding();
+let resetTimer = null;
+
+function getBasePadding() {
+  return window.matchMedia("(max-width: 768px)").matches ? 5 : 20;
+}
+
+function closeGap() {
+  const gap = document.getElementById("gap");
+  const text = document.getElementById("gapText");
+
+  // shrink padding
+  currentPadding = Math.max(currentPadding * 0.1,1);
+  gap.style.padding = `${currentPadding}vh`;
+
+  // collapse text space smoothly
+  text.style.maxWidth = "0";
+  text.style.opacity = "0";
+
+  clearTimeout(resetTimer);
+
+  resetTimer = setTimeout(() => {
+    // restore padding
+    currentPadding = getBasePadding();
+    gap.style.padding = `${currentPadding}vh`;
+
+    // restore text space
+    text.style.maxWidth = "200px";
+    text.style.opacity = "1";
+  }, 1000);
+}

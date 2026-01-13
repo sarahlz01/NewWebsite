@@ -51,3 +51,28 @@ html::-webkit-scrollbar,
 main::-webkit-scrollbar {
     display: none;
 }
+
+#gap {
+  padding: 20vh;
+  transition: padding 700ms ease;
+}
+
+@media (max-width: 768px) {
+  #gap {
+    padding: 5vh;
+  }
+}
+
+.gap-text {
+  display: inline-block;
+  overflow: hidden;
+
+  max-width: 200px;
+  white-space: nowrap;
+
+  opacity: 1;
+
+  transition:
+    max-width 400ms ease,
+    opacity 300ms ease;
+}

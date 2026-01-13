@@ -18,7 +18,7 @@
         <a href="/"><button><img src="assets/icon2.png" class="top-0 right-0 w-[8vh] h-auto z-30"/></button></a>
         <nav id="nav" class="hidden md:flex items-center bg-cream/20 rounded-3xl backdrop-blur-sm w-[50%] pt-[0.5vh] pb-[0.5vh] border-cream border justify-around">
           <a href="#about"><button class="nav-text text-2xl rounded-3xl transition duration-200 ease-linear hover:bg-cream/40 pl-[2vh] pr-[2vh] pb-[1vh] pt-[1vh] text-rose-100 transition-colors duration-700 ease-in-out">About</button></a>
-        
+          <a href="#design"><button class="nav-text text-2xl rounded-3xl hover:bg-cream/40 pl-[2vh] pr-[2vh] pb-[1vh] pt-[1vh] text-rose-100 transition-colors duration-700 ease-in-out">Design</button></a>
           <a href="#contact"><button class="nav-text text-2xl rounded-3xl hover:bg-cream/40 pl-[2vh] pr-[2vh] pb-[1vh] pt-[1vh] text-rose-100 transition-colors duration-700 ease-in-out">Contact</button></a>
         </nav>
         <div class="flex items-center gap-4">
@@ -41,7 +41,7 @@
             </svg>
           </button>
           <a href="#about" onclick="toggleMenu()" class="mobile-nav-text text-3xl text-rose-100 font-serif py-3 px-4 rounded-lg hover:bg-cream/60 transition-colors duration-200">About</a>
-          
+          <a href="#design" onclick="toggleMenu()" class="mobile-nav-text text-3xl text-rose-100 font-serif py-3 px-4 rounded-lg hover:bg-cream/60 transition-colors duration-200">Design</a>
           <a href="#contact" onclick="toggleMenu()" class="mobile-nav-text text-3xl text-rose-100 font-serif py-3 px-4 rounded-lg hover:bg-cream/60 transition-colors duration-200">Contact</a>
         </div>
       </div>
@@ -111,6 +111,44 @@
           <img src="assets/leaves.png" class="sm:block md:hidden lg:block animate-billow h-auto w-[18vh] max-w-full shrink -ml-[7vh] z-30"/>
         </div>
     </div>
+  </div>
+
+  <!-- Design -->
+  <div id="design" class="min-h-screen flex flex-col text-black transition ease-in-out duration-200 justify-center ">
+    <h1 class="pt-[4%] md:pt-[2%] pl-[6vh] md:pr-[5%] md:pl-[5%] font-serif text-6xl mb-[4vh] md:mb-[6vh]">My <span class="italic"> Design </span> Process</h1>
+    <div class="pr-[5%] pl-[5%] flex flex-col md:flex-row items-center justify-center gap-[4vh]">
+      <!-- Purpose -->
+      <div id="purpose" class="flex flex-col gap-[1vh] md:gap-[2vh] w-[90%] md:w-[28%]">
+        <h2 class="text-3xl md:text-4xl whitespace-nowrap">1. <span id="purpose-span" class="pl-[1.5vh] pr-[1.5vh] rounded-2xl bg-blue-50">Purpose</span></h2>
+        <p class="text-lg">I like to maintain consistent designs to highlight the purpose of a product.</p>
+      </div>
+
+      <!-- Inclusivity -->
+      <div id="inclusivity" class="flex flex-col gap-[1vh] md:gap-[2vh] w-[90%] md:w-[28%]">
+        <h2 class="text-3xl md:text-4xl whitespace-nowrap">2. <span id="inclusivity-span" class="pl-[1.5vh] pr-[1.5vh] rounded-2xl bg-rose-50">Inclusivity</span></h2>
+        <p class="text-lg">I prioritize designs with contrast, clarity, and accessible interactive states.</p>
+      </div>
+
+      <!-- Feedback -->
+      <div id="Feedback" class="flex flex-col gap-[1vh] md:gap-[2vh] w-[90%] md:w-[29%]">
+        <h2 class="text-3xl md:text-4xl whitespace-nowrap">3. <span id="feedback-span" class="pl-[1.5vh] pr-[1.5vh] rounded-2xl bg-shutter-gray">Feedback</span></h2>
+        <p class="text-lg">The most important step. I always make sure to gather feedback from surveys, click maps, etc. </p>
+      </div>
+    </div>
+
+    <!-- The Creation of Adam -->
+    <div class="flex flex-row w-full h-auto justify-center items-center transition ease-in-out duration-200">
+      <img id="adam" src="assets/adam.svg" class="h-auto w-[50%] md:w-[80%] -translate-y-[4vh] md:-translate-y-[6.5vh]"/>
+      <div class="flex justify-center items-center text-center">
+        <div class="flex justify-center items-center text-center">
+          <button id="gap" class="whitespace-nowrap italic text-gray" onclick="closeGap()">
+            <span id="gapText" class="gap-text">[ click here ]</span>
+          </button>
+        </div>
+      </div>
+      <img id="god" src="assets/god.svg" class="pt-[10vh] md:pt-[15vh] h-auto w-[50%] translate-y-[0vh] md:translate-y-[1vh] md:w-[80%]"/>
+    </div>
+    <h1 class="pr-[5%] pl-[5%] flex justify-start items-start text-gray">The Creation of Adam by Michelangelo</h1>
   </div>
 
   <!-- Contact -->
