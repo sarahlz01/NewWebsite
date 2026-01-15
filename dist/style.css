@@ -1508,6 +1508,7 @@ main::-webkit-scrollbar {
   margin-right: 1vh;
   border-radius: 10px;
   cursor: default;
+  white-space: nowrap;
 }
 
 .tag:hover {
