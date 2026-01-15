@@ -415,3 +415,38 @@ function closeGap() {
     text.style.opacity = "1";
   }, 1000);
 }
+
+fetch("data/projects.json")
+  .then(res => res.json())
+  .then(projects => {
+    const container = document.getElementById("projects");
+
+    projects.forEach(project => {
+      const card = document.createElement("div");
+      card.className = "project-card";
+      const tagsHTML = project.tags
+        .map(tag => `<span class="tag">${tag}</span>`)
+        .join("");
+
+      card.innerHTML = `
+        <h3 id="project-title">${project.title}</h3>
+        <div class="tags">
+          ${tagsHTML}
+        </div>
+        <div class="flex flex-row gap-[1vh]">
+          <img src="${project.image1}" alt="${project.title}" class="mt-[2vh] mb-[2vh] rounded-lg w-[18vh]"/>
+          <img src="${project.image2}" alt="${project.title}" class="mt-[2vh] mb-[2vh] rounded-lg w-[18vh]"/>
+        </div>
+        <a class="cardlink" href="${project.link}">
+          <button id="learnMore" class="pr-[1vh] pl-[1vh] pt-[1vh] pb-[1vh] bg-rose-100 text-cream rounded-lg flex flex-row gap-[1vh]">
+            Learn more
+            <svg width="3vh" height="3vh" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 18L18 6M18 6H10M18 6V14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </a>
+      `;
+
+      container.appendChild(card);
+    });
+  });

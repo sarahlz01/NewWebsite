@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Portfolio Website",
+    "tags": ["Figma", "Web Design", "Digital Art"],
+    "image1": "data/personalWebsite1.jpg",
+    "image2": "data/personalWebsite2.jpg",
+    "link": "https://www.figma.com/design/uId3kNYWVdql2CO8bSBL5j/Personal-Website?node-id=0-1&t=hPhZr0yUj69QFB6F-1"
+  },
+  {
+    "title": "FinanceU",
+    "tags": ["Figma", "Product Design"],
+    "image1": "data/financeu1.jpg",
+    "image2": "data/financeu2.jpg",
+    "link": "https://www.figma.com/design/kthbceyPB8KMDgOFrgADUc/FinanceU?node-id=0-1&t=kmMlypcCtKho5b4B-1"
+  }
+]

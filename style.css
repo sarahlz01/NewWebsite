@@ -76,3 +76,45 @@ main::-webkit-scrollbar {
     max-width 400ms ease,
     opacity 300ms ease;
 }
+
+.tag {
+  background-color: #FFE7E7;
+  padding-right: 2vh;
+  padding-left: 2vh;
+  padding-top: 0.75vh;
+  padding-bottom: 0.75vh;
+  margin-right: 1vh;
+  border-radius: 10px;
+  cursor: default;
+}
+
+.tag:hover {
+  box-shadow: #7b7b7b 0px 4px 5px -1px, #7b7b7b 0px 2px 3px -1px;
+}
+
+#project-title {
+  font-family: 'Instrument Serif', serif;
+  font-size: 5vh;
+}
+
+.project-card {
+  padding-left: 3vh;
+  padding-right: 3vh;
+  padding-bottom: 2vh;
+  padding-top: 1vh;
+  border-radius: 10px;
+  background-color: #99B5D0;
+}
+
+#learnMore {
+  width: fit-content;
+  transition: gap 200ms ease;
+}
+
+#learnMore:hover {
+  gap: 2vh;
+}
+
+.cardlink {
+  display: inline-flex;
+}
