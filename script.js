@@ -1,4 +1,13 @@
 function dark() {
+  // Design Portfolio
+  const portfolio = document.getElementById('design-portfolio');
+  portfolio.classList.add('bg-[#20405E]');
+  const portfolioBucket = document.getElementById('portfolio-bucket');
+  portfolioBucket.classList.add('bg-[#20405E]');
+  portfolioBucket.classList.remove('bg-blue-50');
+  portfolioBucket.classList.remove('text-black');
+  portfolioBucket.classList.add('text-cream');
+  
   // Design
   const design = document.getElementById('design');
   design.classList.add('bg-[#20405E]');
@@ -173,6 +182,15 @@ function dark() {
 
 // Light mode function
 function light() {
+  // Design Portfolio
+  const portfolio = document.getElementById('design-portfolio');
+  portfolio.classList.remove('bg-[#20405E]');
+  const portfolioBucket = document.getElementById('portfolio-bucket');
+  portfolioBucket.classList.remove('bg-[#20405E]');
+  portfolioBucket.classList.add('bg-blue-50');
+  portfolioBucket.classList.add('text-black');
+  portfolioBucket.classList.remove('text-cream');
+
   // Design
   const design = document.getElementById('design');
   design.classList.remove('bg-[#20405E]');
