@@ -8,9 +8,16 @@
   },
   {
     "title": "FinanceU",
-    "tags": ["Figma", "Product Design"],
+    "tags": ["Figma", "App Design"],
     "image1": "data/financeu1.jpg",
     "image2": "data/financeu2.jpg",
     "link": "https://www.figma.com/design/kthbceyPB8KMDgOFrgADUc/FinanceU?node-id=0-1&t=kmMlypcCtKho5b4B-1"
+  },
+  {
+    "title": "NBA Hunt",
+    "tags": ["Figma", "App Design"],
+    "image1": "data/nba1.png",
+    "image2": "data/nba2.png",
+    "link": "https://www.figma.com/design/aH3DcxzvfAvc5UPOu9154m/NBA-Hunt?node-id=0-1&t=ukR09AYJ0Kzx0a74-1"
   }
 ]
