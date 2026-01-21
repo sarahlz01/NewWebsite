@@ -19,5 +19,12 @@
     "image1": "data/nba1.png",
     "image2": "data/nba2.png",
     "link": "https://www.figma.com/design/aH3DcxzvfAvc5UPOu9154m/NBA-Hunt?node-id=0-1&t=ukR09AYJ0Kzx0a74-1"
+  },
+  {
+    "title": "Spotted",
+    "tags": ["Paper", "App Design"],
+    "image1": "data/spotted1.png",
+    "image2": "data/spotted2.png",
+    "link": "https://app.paper.design/file/01K9V0CARMAGAMQKT7VVARQW7A"
   }
 ]
